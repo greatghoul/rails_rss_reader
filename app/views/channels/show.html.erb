@@ -6,5 +6,6 @@
   <%= link_to "Edit this channel", edit_channel_path(@channel) %> |
   <%= link_to "Back to channels", channels_path %>
 
+  <%= button_to "Fetch", [:fetch, @channel], method: :post %>
   <%= button_to "Destroy this channel", @channel, method: :delete %>
 </div>

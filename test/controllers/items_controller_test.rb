@@ -17,7 +17,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create item" do
     assert_difference("Item.count") do
-      post items_url, params: { item: { content: @item.content, description: @item.description, link: @item.link, published_at: @item.published_at, read_at: @item.read_at, title: @item.title } }
+      post items_url, params: { item: { channel_id: @item.channel_id, content: @item.content, description: @item.description, link: @item.link, published_at: @item.published_at, read_at: @item.read_at, title: @item.title } }
     end
 
     assert_redirected_to item_url(Item.last)
@@ -34,7 +34,7 @@ class ItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update item" do
-    patch item_url(@item), params: { item: { content: @item.content, description: @item.description, link: @item.link, published_at: @item.published_at, read_at: @item.read_at, title: @item.title } }
+    patch item_url(@item), params: { item: { channel_id: @item.channel_id, content: @item.content, description: @item.description, link: @item.link, published_at: @item.published_at, read_at: @item.read_at, title: @item.title } }
     assert_redirected_to item_url(@item)
   end
 

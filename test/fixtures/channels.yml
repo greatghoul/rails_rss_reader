@@ -5,13 +5,13 @@ one:
   description: MyString
   link: MyString
   xml_link: MyString
-  fetched_at: 2022-10-26 08:47:06
-  category_id: 1
+  fetched_at: 2022-10-28 00:08:33
+  category: one
 
 two:
   title: MyString
   description: MyString
   link: MyString
   xml_link: MyString
-  fetched_at: 2022-10-26 08:47:06
-  category_id: 1
+  fetched_at: 2022-10-28 00:08:33
+  category: two

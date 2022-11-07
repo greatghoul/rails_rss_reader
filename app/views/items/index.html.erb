@@ -2,13 +2,29 @@
 
 <h1>Items</h1>
 
-<div id="items">
-  <% @items.each do |item| %>
-    <%= render item %>
-    <p>
-      <%= link_to "Show this item", item %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New item", new_item_path %>
+<table>
+  <thead>
+    <tr>
+      <th>Channel</th>
+      <th>Title</th>
+      <th>PubDate</th>
+      <th></th>      
+    </tr>
+  </thead>
+  <tbody>
+    <% @items.each do |item| %>
+      <tr>
+        <td>
+          <%= item.channel.title %>
+        </td>
+        <td>
+          <%= link_to item.title, item.link, taget: '_blank' %>
+        </td>
+        <td>
+          <%= item.published_at %>
+        </td>
+        <td></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

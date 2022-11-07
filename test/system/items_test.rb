@@ -14,6 +14,7 @@ class ItemsTest < ApplicationSystemTestCase
     visit items_url
     click_on "New item"
 
+    fill_in "Channel", with: @item.channel_id
     fill_in "Content", with: @item.content
     fill_in "Description", with: @item.description
     fill_in "Link", with: @item.link
@@ -30,6 +31,7 @@ class ItemsTest < ApplicationSystemTestCase
     visit item_url(@item)
     click_on "Edit this item", match: :first
 
+    fill_in "Channel", with: @item.channel_id
     fill_in "Content", with: @item.content
     fill_in "Description", with: @item.description
     fill_in "Link", with: @item.link

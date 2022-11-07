@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <nav>
+      <%= link_to "Items", items_path %>
+      <%= link_to "Categories", categories_path %>
+      <%= link_to "Channels", channels_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>

@@ -6,7 +6,7 @@ class CreateChannels < ActiveRecord::Migration[7.0]
       t.string :link
       t.string :xml_link
       t.datetime :fetched_at
-      t.integer :category_id
+      t.belongs_to :category, null: false, foreign_key: true
 
       t.timestamps
     end

@@ -7,6 +7,7 @@ class CreateItems < ActiveRecord::Migration[7.0]
       t.string :link
       t.datetime :published_at
       t.datetime :read_at
+      t.belongs_to :channel, null: false, foreign_key: true
 
       t.timestamps
     end
